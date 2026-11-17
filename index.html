@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>GIF Gala RSVP</title>
+
+    <!-- Connects the CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <main class="invitation-card">
+
         <p class="eyebrow">YOU'RE INVITED TO</p>
 
         <h1>You're Invited to the GIF Gala: Where Memes Come to Life!</h1>
+
         <h2 class="event-date">7/21/23</h2>
 
         <p class="description">
@@ -24,12 +30,18 @@
 
         <div class="sparkle">✦ ✧ ✦</div>
 
+        <!-- RSVP form section -->
         <section class="rsvp-section">
+
             <h2>RSVP</h2>
+
             <p>Let us know if you'll be joining the fun!</p>
 
             <form id="rsvpForm">
+
+                <!-- Required email field -->
                 <label for="email">Email Address</label>
+
                 <input
                     type="email"
                     id="email"
@@ -38,20 +50,29 @@
                     required
                 >
 
+                <!-- Required attendance field -->
                 <label for="attendance">Will you attend?</label>
+
                 <select id="attendance" name="attendance" required>
                     <option value="">Choose your response</option>
                     <option value="yes">Yes, I'll be there!</option>
                     <option value="no">Sorry, I can't make it.</option>
                 </select>
 
+                <!-- Submit button -->
                 <button type="submit">Submit RSVP</button>
+
             </form>
 
-            <div id="confirmationMessage" role="status" aria-live="polite"></div>
+            <!-- Confirmation message appears after submission -->
+            <div id="confirmationMessage"></div>
+
         </section>
+
     </main>
 
+    <!-- Connects the JavaScript file -->
     <script src="actions.js"></script>
+
 </body>
 </html>

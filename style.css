@@ -1,167 +1,175 @@
 
-/* Styles the entire page */
+/* Applies the same box-sizing rule to all elements */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Includes padding and borders in the element's size */
 }
 
+/* Styles the entire page */
 body {
-    margin: 0;
-    min-height: 100vh;
-    padding: 30px 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    color: #28133f;
-    background: linear-gradient(135deg, #ff70b7, #9b5de5, #00c2cb);
+    margin: 0; /* Removes default margins */
+    min-height: 100vh; /* Makes the page fill the screen height */
+    padding: 30px 16px; /* Adds space around the content */
+    display: flex; /* Allows the invitation card to be centered */
+    justify-content: center; /* Centers the card horizontally */
+    align-items: center; /* Centers the card vertically */
+    font-family: Arial, sans-serif; /* Sets the font */
+    color: #333333; /* Sets the main text color */
+    background: linear-gradient(135deg, #f07167, #00afb9); /* Creates a colorful gradient */
 }
 
-/* Styles the invitation card */
+/* Styles the main invitation card */
 .invitation-card {
-    width: 100%;
-    max-width: 650px;
-    padding: 42px;
-    text-align: center;
-    background-color: #ffffff;
-    border: 5px solid #ffe45e;
-    border-radius: 24px;
-    box-shadow: 0 15px 40px rgba(35, 10, 60, 0.25);
+    width: 100%; /* Uses the available width */
+    max-width: 650px; /* Prevents the card from becoming too wide */
+    padding: 42px; /* Adds space inside the card */
+    text-align: center; /* Centers the text */
+    background-color: white; /* Makes the card white */
+    border: 5px solid #00afb9; /* Adds a turquoise border */
+    border-radius: 24px; /* Rounds the card corners */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
 }
 
-/* Styles the invitation label */
+/* Styles the small invitation label */
 .eyebrow {
-    margin: 0 0 12px;
-    color: #9b5de5;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
+    margin-bottom: 12px; /* Adds space below the label */
+    color: #f07167; /* Sets the coral color */
+    font-size: 14px; /* Sets the text size */
+    font-weight: bold; /* Makes the text bold */
+    letter-spacing: 3px; /* Adds space between letters */
 }
 
 /* Styles the main heading */
 h1 {
-    margin: 0;
-    color: #471869;
-    font-size: 36px;
-    line-height: 1.2;
+    margin: 0; /* Removes default margins */
+    color: #f07167; /* Sets the coral heading color */
+    font-size: 36px; /* Makes the heading large */
+    line-height: 1.2; /* Improves line spacing */
 }
 
 /* Styles the event date */
 .event-date {
-    display: inline-block;
-    margin: 22px 0;
-    padding: 10px 22px;
-    color: #28133f;
-    background-color: #ffe45e;
-    border-radius: 30px;
-    font-size: 20px;
+    display: inline-block; /* Keeps the background around the date */
+    margin: 22px 0; /* Adds space above and below */
+    padding: 10px 22px; /* Adds space inside the date label */
+    color: white; /* Makes the date text white */
+    background-color: #00afb9; /* Sets the turquoise background */
+    border-radius: 30px; /* Makes the date label rounded */
+    font-size: 20px; /* Sets the date text size */
 }
 
-/* Styles the description */
+/* Styles the event description */
 .description {
-    max-width: 500px;
-    margin: 0 auto 20px;
-    color: #62566d;
-    font-size: 16px;
-    line-height: 1.7;
+    max-width: 500px; /* Limits the paragraph width */
+    margin: 0 auto 20px; /* Centers the paragraph */
+    color: #555555; /* Sets a gray text color */
+    font-size: 16px; /* Sets the text size */
+    line-height: 1.7; /* Makes the paragraph easier to read */
 }
 
 /* Styles the decorative symbols */
 .sparkle {
-    margin: 18px 0;
-    color: #ff70b7;
-    font-size: 28px;
+    margin: 18px 0; /* Adds space around the symbols */
+    color: #f07167; /* Makes the symbols coral */
+    font-size: 30px; /* Makes the symbols larger */
 }
 
 /* Styles the RSVP section */
 .rsvp-section {
-    margin-top: 20px;
-    padding: 26px;
-    text-align: left;
-    background-color: #f8f1ff;
-    border-radius: 16px;
+    margin-top: 20px; /* Adds space above the section */
+    padding: 28px; /* Adds space inside the section */
+    text-align: left; /* Aligns form content to the left */
+    background-color: #e9f9f9; /* Adds a light turquoise background */
+    border-radius: 16px; /* Rounds the section corners */
 }
 
 /* Styles the RSVP heading */
 .rsvp-section h2 {
-    margin: 0 0 8px;
-    color: #471869;
-    text-align: center;
-    font-size: 28px;
+    margin: 0 0 10px; /* Adds space below the heading */
+    color: #00afb9; /* Sets the turquoise color */
+    text-align: center; /* Centers the heading */
+    font-size: 28px; /* Sets the heading size */
 }
 
 /* Styles the RSVP introduction */
 .rsvp-section p {
-    margin: 0 0 22px;
-    color: #62566d;
-    text-align: center;
+    margin-bottom: 25px; /* Adds space below the paragraph */
+    color: #555555; /* Sets the paragraph color */
+    text-align: center; /* Centers the paragraph */
 }
 
 /* Styles the form labels */
 label {
-    display: block;
-    margin-bottom: 8px;
-    color: #471869;
-    font-weight: bold;
+    display: block; /* Places each label on its own line */
+    margin-bottom: 10px; /* Adds space below each label */
+    color: #333333; /* Sets the label color */
+    font-weight: bold; /* Makes labels bold */
 }
 
-/* Styles the form fields */
+/* Styles the email field and attendance menu */
 input,
 select {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 13px;
-    border: 2px solid #d9c5ed;
-    border-radius: 9px;
-    background-color: #ffffff;
-    font-size: 15px;
+    display: block; /* Places each field on its own line */
+    width: 100%; /* Makes fields fill the available width */
+    margin-bottom: 28px; /* Adds space between the form fields */
+    padding: 14px; /* Adds space inside the fields */
+    border: 2px solid #00afb9; /* Adds a turquoise border */
+    border-radius: 9px; /* Rounds the field corners */
+    background-color: white; /* Keeps the fields white */
+    font-size: 15px; /* Sets the field text size */
 }
 
-/* Highlights selected fields */
+/* Highlights a field when selected */
 input:focus,
 select:focus {
-    outline: none;
-    border-color: #9b5de5;
+    outline: none; /* Removes the default outline */
+    border-color: #f07167; /* Changes the border to coral */
 }
 
 /* Styles the submit button */
 button {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 9px;
-    background-color: #471869;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    display: block; /* Places the button on its own line */
+    width: 100%; /* Makes the button fill the form width */
+    margin-top: 5px; /* Adds space above the button */
+    padding: 16px; /* Adds space inside the button */
+    border: none; /* Removes the default border */
+    border-radius: 9px; /* Rounds the button corners */
+    background-color: #f07167; /* Sets the coral background */
+    color: white; /* Makes the button text white */
+    font-size: 17px; /* Sets the button text size */
+    font-weight: bold; /* Makes the button text bold */
+    cursor: pointer; /* Shows that the button is clickable */
+    transition: background-color 0.3s ease; /* Smooths the hover effect */
 }
 
-/* Changes button color when hovering */
+/* Changes the button color when the mouse hovers over it */
 button:hover {
-    background-color: #7135a0;
+    background-color: #00afb9; /* Changes the button to turquoise */
 }
 
 /* Styles the confirmation message */
 #confirmationMessage {
-    margin-top: 18px;
-    color: #471869;
-    text-align: center;
-    font-weight: bold;
-    line-height: 1.5;
+    display: none; /* Hides the message until the form is submitted */
+    margin-top: 25px; /* Adds space above the message */
+    padding: 16px; /* Adds space inside the message area */
+    color: #ffffff; /* Makes the message text white */
+    background-color: #00afb9; /* Sets a turquoise background */
+    border-radius: 10px; /* Rounds the message corners */
+    text-align: center; /* Centers the message */
+    font-weight: bold; /* Makes the message bold */
+    line-height: 1.5; /* Improves text spacing */
 }
 
-/* Adjusts the page for smaller screens */
+/* Adjusts the page for mobile screens */
 @media (max-width: 600px) {
     .invitation-card {
-        padding: 26px 20px;
+        padding: 25px 18px; /* Reduces card padding */
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 28px; /* Makes the heading smaller */
     }
 
     .rsvp-section {
-        padding: 20px;
+        padding: 20px; /* Reduces RSVP section padding */
     }
 }
