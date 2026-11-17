@@ -1,0 +1,167 @@
+
+/* Styles the entire page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #28133f;
+    background: linear-gradient(135deg, #ff70b7, #9b5de5, #00c2cb);
+}
+
+/* Styles the invitation card */
+.invitation-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 42px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 5px solid #ffe45e;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(35, 10, 60, 0.25);
+}
+
+/* Styles the invitation label */
+.eyebrow {
+    margin: 0 0 12px;
+    color: #9b5de5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* Styles the main heading */
+h1 {
+    margin: 0;
+    color: #471869;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+/* Styles the event date */
+.event-date {
+    display: inline-block;
+    margin: 22px 0;
+    padding: 10px 22px;
+    color: #28133f;
+    background-color: #ffe45e;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+/* Styles the description */
+.description {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    color: #62566d;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Styles the decorative symbols */
+.sparkle {
+    margin: 18px 0;
+    color: #ff70b7;
+    font-size: 28px;
+}
+
+/* Styles the RSVP section */
+.rsvp-section {
+    margin-top: 20px;
+    padding: 26px;
+    text-align: left;
+    background-color: #f8f1ff;
+    border-radius: 16px;
+}
+
+/* Styles the RSVP heading */
+.rsvp-section h2 {
+    margin: 0 0 8px;
+    color: #471869;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Styles the RSVP introduction */
+.rsvp-section p {
+    margin: 0 0 22px;
+    color: #62566d;
+    text-align: center;
+}
+
+/* Styles the form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #471869;
+    font-weight: bold;
+}
+
+/* Styles the form fields */
+input,
+select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 13px;
+    border: 2px solid #d9c5ed;
+    border-radius: 9px;
+    background-color: #ffffff;
+    font-size: 15px;
+}
+
+/* Highlights selected fields */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #9b5de5;
+}
+
+/* Styles the submit button */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background-color: #471869;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Changes button color when hovering */
+button:hover {
+    background-color: #7135a0;
+}
+
+/* Styles the confirmation message */
+#confirmationMessage {
+    margin-top: 18px;
+    color: #471869;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* Adjusts the page for smaller screens */
+@media (max-width: 600px) {
+    .invitation-card {
+        padding: 26px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .rsvp-section {
+        padding: 20px;
+    }
+}
