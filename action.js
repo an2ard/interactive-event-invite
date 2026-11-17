@@ -12,21 +12,19 @@ rsvpForm.addEventListener("submit", function(event) {
     // Gets the selected attendance option
     var attendance = document.getElementById("attendance").value;
 
-    // Gets the attendee's email
-    var email = document.getElementById("email").value;
-
     // Checks if the user is attending
     if (attendance === "yes") {
 
         // Displays a positive message with a party emoji
-        confirmationMessage.textContent =
-            "🎉 Awesome! You're on the guest list! We can't wait to see you at the GIF Gala! A confirmation will be sent to " + email + ".";
+        confirmationMessage.innerHTML =
+            '🎉 Party on! We look forward to seeing you at the GIF Gala!';
 
     } else {
 
-        // Displays a message if the user cannot attend
-        confirmationMessage.textContent =
-            "Thank you for your response! We're sorry you can't make it. Hopefully we'll see you next time!";
+        // Displays the GIF if the user is not attending
+        confirmationMessage.innerHTML =
+            '<img src="https://media.giphy.com/media/JER2en0ZRiGUE/giphy.gif" alt="GIF reaction" class="confirmation-gif">';
+
     }
 
     // Makes the confirmation message visible

@@ -141,7 +141,7 @@ button {
     transition: background-color 0.3s ease; /* Smooths the hover effect */
 }
 
-/* Changes the button color when the mouse hovers over it */
+/* Changes the button color when hovered */
 button:hover {
     background-color: #00afb9; /* Changes the button to turquoise */
 }
@@ -151,12 +151,22 @@ button:hover {
     display: none; /* Hides the message until the form is submitted */
     margin-top: 25px; /* Adds space above the message */
     padding: 16px; /* Adds space inside the message area */
-    color: #ffffff; /* Makes the message text white */
+    color: white; /* Makes the message text white */
     background-color: #00afb9; /* Sets a turquoise background */
     border-radius: 10px; /* Rounds the message corners */
     text-align: center; /* Centers the message */
     font-weight: bold; /* Makes the message bold */
     line-height: 1.5; /* Improves text spacing */
+}
+
+/* Styles the GIF displayed when someone cannot attend */
+.confirmation-gif {
+    display: block; /* Places the GIF on its own line */
+    width: 100%; /* Makes the GIF responsive */
+    max-width: 300px; /* Limits the GIF size */
+    height: auto; /* Keeps the original proportions */
+    margin: 10px auto; /* Centers the GIF */
+    border-radius: 10px; /* Rounds the GIF corners */
 }
 
 /* Adjusts the page for mobile screens */
