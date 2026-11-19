@@ -1,52 +1,55 @@
 
-// Gets the RSVP form and confirmation message area
-var rsvpForm = document.getElementById("rsvpForm");
-var confirmationMessage = document.getElementById("confirmationMessage");
+// Confirms that the JavaScript file is loading
+console.log("GIF Gala JavaScript is connected!");
 
-// Gets the attendance selection menu
-var attendanceSelect = document.getElementById("attendance");
+// Waits until the HTML page has loaded
+document.addEventListener("DOMContentLoaded", function() {
 
-// Checks that all HTML elements exist
-if (rsvpForm && confirmationMessage && attendanceSelect) {
+    // Gets the RSVP form and confirmation message area
+    var rsvpForm = document.getElementById("rsvpForm");
+    var confirmationMessage = document.getElementById("confirmationMessage");
+    var attendanceSelect = document.getElementById("attendance");
 
-    // Runs when the user submits the form
-    rsvpForm.addEventListener("submit", function(event) {
+    // Checks that all HTML elements exist
+    if (rsvpForm && confirmationMessage && attendanceSelect) {
 
-        // Prevents the page from refreshing
-        event.preventDefault();
+        // Runs when the user submits the form
+        rsvpForm.addEventListener("submit", function(event) {
 
-        // Gets the selected attendance option
-        var attendance = attendanceSelect.value;
+            // Prevents the page from refreshing
+            event.preventDefault();
 
-        // Checks if the user is attending
-        if (attendance === "yes") {
+            // Gets the selected attendance option
+            var attendance = attendanceSelect.value;
 
-            // Displays the confirmation message
-            confirmationMessage.innerHTML =
-                "🎉 Party on! We look forward to seeing you at the GIF Gala!";
+            // Checks if the user is attending
+            if (attendance === "yes") {
 
-        }
+                confirmationMessage.innerHTML =
+                    "🎉 Party on! We look forward to seeing you at the GIF Gala!";
 
-        // Checks if the user is NOT attending
-        else if (attendance === "no") {
+            }
 
-            // Displays the reaction GIF
-            confirmationMessage.innerHTML =
-                '<img src="https://media.giphy.com/media/JER2en0ZRiGUE/giphy.gif" alt="GIF reaction" class="confirmation-gif">';
+            // Checks if the user is not attending
+            else if (attendance === "no") {
 
-        }
+                confirmationMessage.innerHTML =
+                    '<img src="https://media.giphy.com/media/JER2en0ZRiGUE/giphy.gif" alt="GIF reaction" class="confirmation-gif">';
 
-        // Makes the confirmation area visible
-        confirmationMessage.style.display = "block";
+            }
 
-        // Clears the form after submission
-        rsvpForm.reset();
+            // Makes the confirmation area visible
+            confirmationMessage.style.display = "block";
 
-    });
+            // Clears the form
+            rsvpForm.reset();
 
-} else {
+        });
 
-    // Shows an error if an HTML element is missing
-    console.error("Could not find the RSVP form, attendance menu, or confirmation message.");
+    } else {
 
-}
+        console.error("One or more HTML elements could not be found.");
+
+    }
+
+});
