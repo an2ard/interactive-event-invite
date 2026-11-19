@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +29,7 @@
 
         <div class="sparkle">✦ ✧ ✦</div>
 
-        <!-- RSVP form section -->
+        <!-- RSVP form -->
         <section class="rsvp-section">
 
             <h2>RSVP</h2>
@@ -39,7 +38,6 @@
 
             <form id="rsvpForm">
 
-                <!-- Required email field -->
                 <label for="email">Email Address</label>
 
                 <input
@@ -50,7 +48,6 @@
                     required
                 >
 
-                <!-- Required attendance field -->
                 <label for="attendance">Will you attend?</label>
 
                 <select id="attendance" name="attendance" required>
@@ -59,12 +56,11 @@
                     <option value="no">Sorry, I can't make it.</option>
                 </select>
 
-                <!-- Submit button -->
                 <button type="submit">Submit RSVP</button>
 
             </form>
 
-            <!-- Confirmation message and GIF area -->
+            <!-- Hidden until the form is submitted -->
             <div id="confirmationMessage"></div>
 
         </section>
