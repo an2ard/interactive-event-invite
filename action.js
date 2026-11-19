@@ -3,34 +3,44 @@
 var rsvpForm = document.getElementById("rsvpForm");
 var confirmationMessage = document.getElementById("confirmationMessage");
 
-// Runs when the user submits the form
-rsvpForm.addEventListener("submit", function(event) {
+// Checks that the HTML elements were found
+if (rsvpForm && confirmationMessage) {
 
-    // Prevents the page from refreshing
-    event.preventDefault();
+    // Runs when the user submits the form
+    rsvpForm.addEventListener("submit", function(event) {
 
-    // Gets the selected attendance option
-    var attendance = document.getElementById("attendance").value;
+        // Prevents the page from refreshing
+        event.preventDefault();
 
-    // Checks if the user is attending
-    if (attendance === "yes") {
+        // Gets the selected attendance option
+        var attendance = document.getElementById("attendance").value;
 
-        // Displays a positive message with a party emoji
-        confirmationMessage.innerHTML =
-            '🎉 Party on! We look forward to seeing you at the GIF Gala!';
+        // Checks if the user is attending
+        if (attendance === "yes") {
 
-    } else {
+            // Displays a positive message
+            confirmationMessage.innerHTML =
+                "🎉 Party on! We look forward to seeing you at the GIF Gala!";
 
-        // Displays the GIF if the user is not attending
-        confirmationMessage.innerHTML =
-            '<img src="https://media.giphy.com/media/JER2en0ZRiGUE/giphy.gif" alt="GIF reaction" class="confirmation-gif">';
+        } else if (attendance === "no") {
 
-    }
+            // Displays the GIF if the user is not attending
+            confirmationMessage.innerHTML =
+                '<img src="https://media.giphy.com/media/JER2en0ZRiGUE/giphy.gif" alt="GIF reaction" class="confirmation-gif">';
 
-    // Makes the confirmation message visible
-    confirmationMessage.style.display = "block";
+        }
 
-    // Clears the form after submission
-    rsvpForm.reset();
+        // Makes the confirmation message visible
+        confirmationMessage.style.display = "block";
 
-});
+        // Clears the form after submission
+        rsvpForm.reset();
+
+    });
+
+} else {
+
+    // Displays an error if an HTML element cannot be found
+    console.error("The RSVP form or confirmation message was not found. Check your HTML IDs.");
+
+}
